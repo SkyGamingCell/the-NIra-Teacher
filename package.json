@@ -1,14 +1,15 @@
 {
-  "name": "fakeitaydc",
+  "name": "bot",
   "version": "1.0.0",
-  "description": "fakeitaydc",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Itay",
-  "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.4.2"
-  }
+    "discord.js": "^11.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "me",
+  "license": "ISC"
 }
