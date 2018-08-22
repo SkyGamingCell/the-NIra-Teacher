@@ -90,12 +90,12 @@ return message.channel.send(botembed);
   
    //אבישי הגבר מלך 
  if(cmd === `${prefix}avishaiDV`
-    let embed = new Discord.RichEmbed()
-   .addField("אבישי הגברמלך")
-   .setColor('RANDOM')
-   .addField("http://youtube.com/avishaidv")
-   .setFooter("אבישי המלך נודר!");
-   message.channel.send(embed)
+      let embed = new Discord.RichEmbed()
+        .addField("אבישי הגברמלך")
+        .setColor('RANDOM')
+        .addField("http://youtube.com/avishaidv")
+        .setFooter("אבישי המלך נודר!");
+         message.channel.send(embed)
 
  }
 
