@@ -30,8 +30,6 @@ if(message.content == 'בוקר טוב'){
 
 if(cmd === `${prefix}report`){
 
-
-
 let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 if(!rUser) return message.channel.send("Couldn't find user.");
 let reason = args.join(" ").slice(22);
@@ -88,36 +86,24 @@ return message.channel.send(botembed);
       .addField("Member Count", message.guild.memberCount);
 
       return message.channel.send(serverembed);
-    }
+ }
+  
+   //אבישי הגבר מלך 
+ if(cmd === `${prefix}avishaiDV`
+    let embed = new Discord.RichEmbed()
+   .addField("אבישי הגברמלך")
+   .setColor('RANDOM')
+   .addField("http://youtube.com/avishaidv")
+   .setFooter("אבישי המלך נודר!");
+   message.channel.send(embed)
+
+ }
 
 if(message.content == 'לא'){
 
  message.channel.sendMessage('כןןןןן ' );
 }
 
-if(cmd === `${prefix}ban`){
-
-let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-if(!bUser) return message.channel.send("Can't find user!");
-let bReason = args.join(" ").slice(22);
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No can do pal!")
-if(bUser.hasPermission("MANAGE_MEMBERS")) return message.channel.send("That person can't be kicked!");
-
-let banEmbed = new Discord.RichEmbed()
-.setDescription("~Ban~")
-.setColor("#5443ef")
-.addField("Banned User", `${bUser} with ID ${bUser.id}`)
-.addField("Banned By", `<@${message.author.id}> with ID ${message.author.id}`)
-.addField("Banned In", message.channel)
-.addField("Time", message.createdAT)
-.addField("Reason", bReason);
-
-let incidentChannel = message.guild.channels.find(`name`, "incidents")
-if(!incidentChannel) return message.channel.send("Can't find incidents channel")
-
-message.guild.member(bUser).ban(bReason);
-incidentchannel.send(banEmbed);
-}
 
 if(cmd === `${prefix}kick`){
   let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
